@@ -1,28 +1,65 @@
 
-<div>
+<div class="container">
    <app-table>
 
+      <div class="select">
+         <div class="bulk-action">
+            <p>Bulk Actions</p>
+            <img src="./../../../assets/loan images/Vector (3).svg">
+         </div>
+
+         <div class="search">
+            <img src="./../../../assets/loan images/search 1.svg">
+            <p>Search</p>
+         </div>
+         <div class="filter">
+            <p>Filter By</p>
+            <img src="./../../../assets/loan images/Vector (3).svg">
+           
+         </div>
+      </div>
+
       <table mat-table [dataSource] = "dataSource" class = "mat-elevation-z8"> 
+         <ng-container matColumnDef = "button">
+            <th mat-header-cell *matHeaderCellDef></th>
+            <td mat-cell *matCellDef = "let element"> <button type="button" value="view">{{element.button}}</button></td>
+         </ng-container>
          <ng-container matColumnDef = "name">
-            <th mat-header-cell *matHeaderCellDef> Dessert (100g)</th>
+            <th mat-header-cell *matHeaderCellDef> Name</th>
             <td mat-cell *matCellDef = "let element"> {{element.name}} </td>
          </ng-container>
-         <ng-container matColumnDef = "calories">
-            <th mat-header-cell *matHeaderCellDef>Calories</th>
-            <td mat-cell *matCellDef = "let element"> {{element.calories}} </td>
+         <ng-container matColumnDef = "Email">
+            <th mat-header-cell *matHeaderCellDef>Email</th>
+            <td mat-cell *matCellDef = "let element"> {{element.Email}} </td>
          </ng-container>
-         <ng-container matColumnDef = "fat">
-            <th mat-header-cell *matHeaderCellDef>Fat (g)</th>
-            <td mat-cell *matCellDef = "let element"> {{element.fat}} </td>
+         <ng-container matColumnDef = " phoneNumber">
+            <th mat-header-cell *matHeaderCellDef>phoneNumber</th>
+            <td mat-cell *matCellDef = "let element"> {{element.phoneNumber}} </td>
          </ng-container>
-         <ng-container matColumnDef = "carbs">
-             <th mat-header-cell *matHeaderCellDef>Carbs (g)</th>
-             <td mat-cell *matCellDef = "let element"> {{element.carbs}} </td>
+         <ng-container matColumnDef =  '  ippisNo'>
+             <th mat-header-cell *matHeaderCellDef>  IPPISNO</th>
+             <td mat-cell *matCellDef = "let element"> {{element.ippisNo}} </td>
          </ng-container>
-         <ng-container matColumnDef = "protein">
-             <th mat-header-cell *matHeaderCellDef>Protein (g)</th>
-            <td mat-cell *matCellDef = "let element"> {{element.protein}} </td>
+         <ng-container matColumnDef = "Amount">
+             <th mat-header-cell *matHeaderCellDef>Amount</th>
+            <td mat-cell *matCellDef = "let element"> {{element.Amount}} </td>
          </ng-container> 
+         <ng-container matColumnDef = "Tenor">
+            <th mat-header-cell *matHeaderCellDef>Tenor</th>
+           <td mat-cell *matCellDef = "let element"> {{element.Tenor}} </td>
+         </ng-container>
+         <ng-container matColumnDef = "Date">
+            <th mat-header-cell *matHeaderCellDef>Date</th>
+           <td mat-cell *matCellDef = "let element"> {{element.Date}} </td>
+         </ng-container>
+         <ng-container matColumnDef = "Mode">
+            <th mat-header-cell *matHeaderCellDef>Mode</th>
+           <td mat-cell *matCellDef = "let element"> {{element.Mode}} </td>
+         </ng-container> 
+         <ng-container matColumnDef = "mdaName">
+            <th mat-header-cell *matHeaderCellDef>MDA NAME</th>
+           <td mat-cell *matCellDef = "let element"> {{element.mdaName}} </td>
+         </ng-container>   
          <tr mat-header-row *matHeaderRowDef = "displayedColumns"></tr>
          <tr mat-row *matRowDef = "let row; columns: displayedColumns;"></tr>
           
@@ -38,34 +75,4 @@
 
 </div>
 
-<table mat-table [dataSource] = "dataSource" class = "mat-elevation-z8"> 
-    <ng-container matColumnDef = "name">
-       <th mat-header-cell *matHeaderCellDef> Dessert (100g)</th>
-       <td mat-cell *matCellDef = "let element"> {{element.name}} </td>
-    </ng-container>
-    <ng-container matColumnDef = "calories">
-       <th mat-header-cell *matHeaderCellDef>Calories</th>
-       <td mat-cell *matCellDef = "let element"> {{element.calories}} </td>
-    </ng-container>
-    <ng-container matColumnDef = "fat">
-       <th mat-header-cell *matHeaderCellDef>Fat (g)</th>
-       <td mat-cell *matCellDef = "let element"> {{element.fat}} </td>
-    </ng-container>
-    <ng-container matColumnDef = "carbs">
-        <th mat-header-cell *matHeaderCellDef>Carbs (g)</th>
-        <td mat-cell *matCellDef = "let element"> {{element.carbs}} </td>
-    </ng-container>
-    <ng-container matColumnDef = "protein">
-        <th mat-header-cell *matHeaderCellDef>Protein (g)</th>
-       <td mat-cell *matCellDef = "let element"> {{element.protein}} </td>
-    </ng-container> 
-    <tr mat-header-row *matHeaderRowDef = "displayedColumns"></tr>
-    <tr mat-row *matRowDef = "let row; columns: displayedColumns;"></tr>
-     
-     
-      
-    
-    
-    
- 
-</table>
+

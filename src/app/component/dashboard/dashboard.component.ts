@@ -4,11 +4,11 @@ import {MatTableDataSource} from '@angular/material/table';
 
 
 export interface Food {
-  calories: number;
-  carbs: number;
-  fat: number;
-  name: string;
-  protein: number;
+  Numberofloans: string;
+  
+  Amount: string;
+  Day: string;
+  Index: string;
 }
 
 
@@ -19,13 +19,13 @@ export interface Food {
 })
 export class DashboardComponent implements OnInit {
   dataSource: Food[] = [
-    {name: 'Yogurt', calories: 159, fat: 6, carbs: 24, protein: 4},
-    {name: 'Sandwich', calories: 237, fat: 9, carbs: 37, protein: 4},
-    {name: 'Eclairs', calories: 262, fat: 16, carbs: 24, protein: 6},
-    {name: 'Cupcakes', calories: 305, fat: 4, carbs: 67, protein: 4},
-    {name: 'Gingerbreads', calories: 356, fat: 16, carbs: 49, protein: 4},
+    {Day: 'April 9 2021', Numberofloans: '0 applicant',   Amount: '#0.00',  Index: '-100%'},
+    {Day: 'April 8 2021', Numberofloans: '119 applicant', Amount: '#19,634,000.00', Index: '-24.86%'},
+    {Day: 'April 7 2021', Numberofloans: '152 applicant', Amount: '#26,130,000.00', Index: '54.28%'},
+    {Day: 'April 7 2021', Numberofloans: '152 applicant', Amount: '#26,130,000.00', Index: '54.28%'},
+   
  ];
- displayedColumns: string[] = ['name', 'calories', 'fat', 'carbs','protein'];
+ displayedColumns: string[] = ['Day', 'Numberofloans', 'Amount', 'Index'];
 
 
   constructor() { }

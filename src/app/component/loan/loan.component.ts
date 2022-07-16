@@ -1,13 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import {MatSort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
+import { Router } from '@angular/router';
 
 export interface Food {
-  calories: number;
-  carbs: number;
-  fat: number;
+  Email: string;
+  ippisNo: number;
+  phoneNumber: string;
   name: string;
-  protein: number;
+  Amount: string;
+  Tenor: string;
+  Date: string;
+  Mode: string;
+  mdaName: string;
+  button: string
 }
 
 @Component({
@@ -17,17 +23,26 @@ export interface Food {
 })
 export class LoanComponent implements OnInit {
   dataSource: Food[] = [
-    {name: 'Yogurt', calories: 159, fat: 6, carbs: 24, protein: 4},
-    {name: 'Sandwich', calories: 237, fat: 9, carbs: 37, protein: 4},
-    {name: 'Eclairs', calories: 262, fat: 16, carbs: 24, protein: 6},
-    {name: 'Cupcakes', calories: 305, fat: 4, carbs: 67, protein: 4},
-    {name: 'Gingerbreads', calories: 356, fat: 16, carbs: 49, protein: 4},
- ];
- displayedColumns: string[] = ['name', 'calories', 'fat', 'carbs','protein'];
+    {  button: "View", name: 'Celestine Ojiaku', Email: 'okenufrancisco@gmail.com',  phoneNumber: '08066075282',  ippisNo: 490535, Amount: 'N300,000', Tenor: 'Unfinalized', Date: '21/04/21', Mode: 'Web', mdaName: 'National Board for Arabic and Islamic Studies'},
+    {  button: "View", name: 'Celestine Ojiaku', Email: 'okenufrancisco@gmail.com',  phoneNumber: '08066075282',  ippisNo: 490535, Amount: 'N300,000', Tenor: 'Unfinalized', Date: '21/04/21', Mode: 'Web', mdaName: 'National Board for Arabic and Islamic Studies'},
+    {  button: "View", name: 'Celestine Ojiaku', Email: 'okenufrancisco@gmail.com',  phoneNumber: '08066075282',  ippisNo: 490535, Amount: 'N300,000', Tenor: 'Unfinalized', Date: '21/04/21', Mode: 'Web', mdaName: 'National Board for Arabic and Islamic Studies'},
+    {  button: "View", name: 'Celestine Ojiaku', Email: 'okenufrancisco@gmail.com',  phoneNumber: '08066075282',  ippisNo: 490535, Amount: 'N300,000', Tenor: 'Unfinalized', Date: '21/04/21', Mode: 'Web', mdaName: 'National Board for Arabic and Islamic Studies'},
+    {  button: "View", name: 'Celestine Ojiaku', Email: 'okenufrancisco@gmail.com',  phoneNumber: '08066075282',  ippisNo: 490535, Amount: 'N300,000', Tenor: 'Unfinalized', Date: '21/04/21', Mode: 'Web', mdaName: 'National Board for Arabic and Islamic Studies'},
+    {  button: "View", name: 'Celestine Ojiaku', Email: 'okenufrancisco@gmail.com',  phoneNumber: '08066075282',  ippisNo: 490535, Amount: 'N300,000', Tenor: 'Unfinalized', Date: '21/04/21', Mode: 'Web', mdaName: 'National Board for Arabic and Islamic Studies'},
+    {  button: "View", name: 'Celestine Ojiaku', Email: 'okenufrancisco@gmail.com',  phoneNumber: '08066075282',  ippisNo: 490535, Amount: 'N300,000', Tenor: 'Unfinalized', Date: '21/04/21', Mode: 'Web', mdaName: 'National Board for Arabic and Islamic Studies'},
+  ];
+ displayedColumns: string[] = ['button','name', 'Email', ' phoneNumber', '  ippisNo', 'Amount', 'Tenor', 'Date', 'Mode', 'mdaName' ];
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
   }
+
+  viewdetails(){
+    this.router.navigate(['/loan-details'])
+
+  }
+
+  
 
 }

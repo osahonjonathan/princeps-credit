@@ -7,7 +7,7 @@ module.exports = {
         primary: '#FEE9DF',
         secondary:'#E5E5E5',
         tertiary: '#FCFBFB',
-        other: '#ffffff'
+        other: '#000000'
       },
       fontSize: {
         'xxs': '.40rem'

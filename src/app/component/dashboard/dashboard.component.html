@@ -15,7 +15,7 @@
 
     </div>
     <div>
-      <h6>New Applications</h6>
+      <h6>Processing</h6>
       <p>Total Amount</p>
       <h3>#78,917,029.00</h3>
       <p>Total Number of Applications</p>
@@ -23,17 +23,17 @@
 
     </div>
     <div>
-      <h6>New Applications</h6>
+      <h6>Awaiting Disbursement</h6>
       <p>Total Amount</p>
-      <h3>#78,917,029.00</h3>
+      <h3>#1,910,000.00</h3>
       <p>Total Number of Applications</p>
       <h4>852</h4>
 
     </div>
     <div>
-      <h6>New Applications</h6>
+      <h6>Ready for Disbursement</h6>
       <p>Total Amount</p>
-      <h3>#78,917,029.00</h3>
+      <h3>#30,000.00</h3>
       <p>Total Number of Applications</p>
       <h4>852</h4>
 
@@ -44,29 +44,26 @@
    
     
     
-      <app-table>
+      <app-table class="table">
             <p>Disbursement Report last four days</p>
    
          <table mat-table [dataSource] = "dataSource" class = "mat-elevation-z8"> 
-            <ng-container matColumnDef = "name">
-               <th mat-header-cell *matHeaderCellDef> Dessert (100g)</th>
-               <td mat-cell *matCellDef = "let element"> {{element.name}} </td>
+            <ng-container matColumnDef = "Day">
+               <th mat-header-cell *matHeaderCellDef> Day</th>
+               <td mat-cell *matCellDef = "let element"> {{element.Day}} </td>
             </ng-container>
-            <ng-container matColumnDef = "calories">
-               <th mat-header-cell *matHeaderCellDef>Calories</th>
-               <td mat-cell *matCellDef = "let element"> {{element.calories}} </td>
+            <ng-container matColumnDef = "Numberofloans">
+               <th mat-header-cell *matHeaderCellDef>Number of loans</th>
+               <td mat-cell *matCellDef = "let element"> {{element.Numberofloans}} </td>
             </ng-container>
-            <ng-container matColumnDef = "fat">
-               <th mat-header-cell *matHeaderCellDef>Fat (g)</th>
-               <td mat-cell *matCellDef = "let element"> {{element.fat}} </td>
+            <ng-container matColumnDef = "Amount">
+               <th mat-header-cell *matHeaderCellDef>Amount (g)</th>
+               <td mat-cell *matCellDef = "let element"> {{element.Amount}} </td>
             </ng-container>
-            <ng-container matColumnDef = "carbs">
-                <th mat-header-cell *matHeaderCellDef>Carbs (g)</th>
-                <td mat-cell *matCellDef = "let element"> {{element.carbs}} </td>
-            </ng-container>
-            <ng-container matColumnDef = "protein">
-                <th mat-header-cell *matHeaderCellDef>Protein (g)</th>
-               <td mat-cell *matCellDef = "let element"> {{element.protein}} </td>
+           
+            <ng-container matColumnDef = "Index">
+                <th mat-header-cell *matHeaderCellDef>Index (g)</th>
+               <td mat-cell *matCellDef = "let element"> {{element.Index}} </td>
             </ng-container> 
             <tr mat-header-row *matHeaderRowDef = "displayedColumns"></tr>
             <tr mat-row *matRowDef = "let row; columns: displayedColumns;"></tr>

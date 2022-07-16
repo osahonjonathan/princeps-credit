@@ -5,6 +5,9 @@ body {
     width: 950px;
     margin-left: 50px;
     margin: 0, auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 20px;
  
 }
 
@@ -44,8 +47,51 @@ body section div h4 {
     font-size: 25px;
 }
 
+body section div h6:hover {
+    
+    color: slategray;
+    text-decoration: Underline;
+}
+
+
+
 .chart {
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
+    margin-top: 30px;
+    gap: 30px;
 }
+
+th {
+    background-color: #FEE9DF;
+    font-size: 18px;
+    font-weight: 600;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+th.mat-header-cell, td.mat-cell, td.mat-footer-cell {
+    padding: 0;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    font-size: 10px;
+    width: 200px;
+    font-weight: 600;
+}
+
+img {
+    width: 450px;
+}
+
+p {
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+
+::ng-deep .chart .table {
+    background-color: #FCFBFB;
+    padding: 20px;
+    
+}
+
