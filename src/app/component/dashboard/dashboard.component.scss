@@ -1,0 +1,51 @@
+
+
+body {
+    
+    width: 950px;
+    margin-left: 50px;
+    margin: 0, auto;
+ 
+}
+
+
+
+
+.transaction {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+    border-radius: 10px;
+}
+
+
+body section div {
+    background-color: #e5e5e5;
+    padding:20px 20px;
+    height: 245px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+
+}
+
+body section div p {
+    margin-top: 20px;
+}
+
+body section div h3 {
+    color: #F56B2A;
+    font-size: 25px;
+}
+
+body section div h4 {
+    
+    font-size: 25px;
+}
+
+.chart {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
